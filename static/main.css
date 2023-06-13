@@ -1,0 +1,100 @@
+:root {
+    --vert-nav-width: 50px;
+    --profile-bar-picture-size: calc(var(--vert-nav-width));
+    --horiz-nav-width: 250px;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.horiz-nav {
+    background-color: #212A3E;
+    height: var(--vert-nav-width);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.horiz-nav-element {
+    height: var(--vert-nav-width);
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+.horiz-nav-element h5 {
+    font-size: 20px;
+    margin: 0;
+    color: #F1F6F9;
+}
+
+.vert-nav {
+    background-color: #212A3E;
+    width: var(--horiz-nav-width);
+    height: calc(100vh - var(--vert-nav-width));
+    border-top: #394867 solid 2px;
+    position: fixed;
+    top: var(--vert-nav-width);;
+    left: 0;
+}
+.profile-bar {
+    background-color: #212A3E;
+    width: var(--horiz-nav-width);
+    height: var(--vert-nav-width);
+    border-top: #394867 solid 1px;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.profile-bar-picture {
+    width: var(--profile-bar-picture-size);
+    height: var(--profile-bar-picture-size);
+    border-radius: 50%;
+}
+.profile-bar-nick {
+    color: #F1F6F9;
+    font-size: 20px;
+    margin: 5px;
+    text-decoration: underline;
+}
+.vert-nav-buttons {
+    width: var(--horiz-nav-width);
+    height: calc(100vh - var(--vert-nav-width) - var(--vert-nav-width));
+}
+.vert-nav-button {
+    height: var(--vert-nav-width);
+    width: var(--horiz-nav-width);
+    border-bottom: #394867 solid 1px;
+}
+.vert-nav-button-text {
+    color: #F1F6F9;
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    top: calc(var(--vert-nav-width) / 2 - 17px);
+    text-decoration: underline;
+}
+.unavalible {
+    background-color: #CCCCCCCC;
+}
+.main {
+    position: absolute;
+    top: var(--vert-nav-width);
+    left: var(--horiz-nav-width);
+    width: calc(100vw - var(--horiz-nav-width));
+    height: calc(100vh - var(--vert-nav-width));
+}
+.main div h4 {
+    margin: 15px 0 2px 0;
+    color: #212A3E;
+    font-size: 20px;
+}
+.main div p {
+    margin: 0;
+    font-size: 15px;
+    color: #212A3E;
+}
